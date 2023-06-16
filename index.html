@@ -10,26 +10,61 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css">
 </head>
 
-<body>
+<body class="light">
+
+    <button id="darkmode" value="dark">dark</button>
 
     <div id="container">
+
+        <div id="search_area">
+            <div id="search_form">
+                <input type="text" id="search" name="search">
+                <!-- <button id="search_button">Pesquisar</button> -->
+            </div>
+            <div id="results">
+
+            </div>
+        </div>
+
+        <div id="loading">
+            <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+        </div>
+
         <div id="main">
 
         </div>
 
-        <nav aria-label="Page navigation example">
-            <ul>
-                <li>
-                    <a id="prev" href="#">&lt;</a>
-                </li>
-                <li>
-                    <a id="next" href="#">&gt;</a>
-                </li>
-            </ul>
-        </nav>
+        <div id="pagination_area">
+            <select id="per_page">
+                <option value="3">3</option>
+                <option value="6">6</option>
+                <option value="9">9</option>
+                <option value="12">12</option>
+            </select>
+            <nav aria-label="Page navigation example">
+                <ul>
+                    <li>
+                        <a class="navigation_link" id="prev" href="#">&lt;</a>
+                    </li>
+                    <li>
+                        <a class="navigation_link" id="next" href="#">&gt;</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </div>
+
+    <dialog id="pokemon_info">
+        
+        <div id="pokemon_info_datail">
+
+        </div>
+
+        <a href="#" onclick="document.getElementById('pokemon_info').close()">fechar</a>
+    </dialog>
 
 
     <script src="script.js"></script>
